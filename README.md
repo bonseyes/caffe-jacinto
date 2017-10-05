@@ -1,20 +1,19 @@
-# Caffe-jacinto
-###### Caffe-jacinto - embedded deep learning framework
+# Bonseyes official Caffe version
+###### Caffe-jacinto
 
-Caffe-jacinto is a fork of [NVIDIA/caffe](https://github.com/NVIDIA/caffe), which in-turn is derived from [BVLC/Caffe](https://github.com/BVLC/caffe). The modifications in this fork enable training of sparse, quantized CNN models - resulting in low complexity models that can be used in embedded platforms. 
+Bonseyes Caffe-jacinto is a fork of [tidsp/caffe-jacinto](https://github.com/tidsp/caffe-jacinto) which is a fork of [NVIDIA/caffe](https://github.com/NVIDIA/caffe), which in-turn is derived from [BVLC/Caffe](https://github.com/BVLC/caffe). The modifications in this fork enable training of sparse, quantized CNN models - resulting in low complexity models that can be used in embedded platforms.
 
-For example, the semantic segmentation example (see below) shows how to train a model that is nearly 80% sparse (only 20% non-zero coefficients) and 8-bit quantized. This reduces the complexity of convolution layers by <b>5x</b>. An inference engine designed to efficiently take advantage of sparsity can run <b>significantly faster</b> by using such a model. 
+The following additional caffe layers have been integrated:
 
-Care has to be taken to strike the right balance between quality and speedup. We have obtained more than 4x overall speedup for CNN inference on embedded device by applying sparsity. Since 8-bit multiplier is sufficient (instead of floating point), the speedup can be even higher on some platforms.
+- Single shot detection (SDD) (https://github.com/weiliu89/caffe/tree/ssd)
+- Sphereface (https://github.com/wy1iu/sphereface)
+- Squeeze and excitation networks (https://github.com/hujie-frank/SENet)
 
 ### Installation
 * After cloning the source code, switch to the branch caffe-0.16, if it is not checked out already.
 -- *git checkout caffe-0.16*
 
 * Please see the [installation instructions](INSTALL.md) for installing the dependencies and building the code. 
-
-### Training procedure
-After cloning and building this source code, please visit [tidsp/caffe-jacinto-models](https://github.com/tidsp/caffe-jacinto-models) to do the training.
 
 ### Additional Information (can be skipped)
 
@@ -39,6 +38,7 @@ Note that Caffe-jacinto does not directly support any embedded/low-power device.
 
 <br>
 The following sections are kept as it is from the original Caffe.
+
 # Caffe
 
 Caffe is a deep learning framework made with expression, speed, and modularity in mind.
