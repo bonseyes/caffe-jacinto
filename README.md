@@ -1,4 +1,4 @@
-# Bonseyes Official Caffe 1.0 Version - NVIDIA Caffe 0.16 Branch
+# Bonseyes Official Caffe 1.0 Version
 ###### Caffe-jacinto
 
 Bonseyes Caffe-jacinto is a fork of [tidsp/caffe-jacinto](https://github.com/tidsp/caffe-jacinto) which is a fork of [NVIDIA/caffe](https://github.com/NVIDIA/caffe), which in-turn is derived from [BVLC/Caffe](https://github.com/BVLC/caffe). The modifications in this fork enable training of sparse, quantized CNN models - resulting in low complexity models that can be used in embedded platforms.
@@ -8,6 +8,10 @@ The following additional caffe layers have been integrated:
 - Single shot detection (SDD) (https://github.com/weiliu89/caffe/tree/ssd)
 - Sphereface (https://github.com/wy1iu/sphereface)
 - Squeeze and excitation networks (https://github.com/hujie-frank/SENet)
+
+Modifications relative to [BVLC/Caffe]:
+
+- Pooling layer have been modified from ceil to floor to be compatible to pytorch
 
 ### Installation
 * After cloning the source code, switch to the branch caffe-0.16, if it is not checked out already.
