@@ -1,4 +1,4 @@
-# Bonseyes official Caffe version
+# Bonseyes Official Caffe 1.0 Version - NVIDIA Caffe 0.16 Branch
 ###### Caffe-jacinto
 
 Bonseyes Caffe-jacinto is a fork of [tidsp/caffe-jacinto](https://github.com/tidsp/caffe-jacinto) which is a fork of [NVIDIA/caffe](https://github.com/NVIDIA/caffe), which in-turn is derived from [BVLC/Caffe](https://github.com/BVLC/caffe). The modifications in this fork enable training of sparse, quantized CNN models - resulting in low complexity models that can be used in embedded platforms.
